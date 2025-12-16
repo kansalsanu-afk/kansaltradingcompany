@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kansal Trading Company | False Ceiling Services & Material Wholesaler</title>
+  <meta name="description" content="Kansal Trading Company (Noida): Material wholesaler for ceiling solutions with optional labour & installation. Gypsum, Grid, Acoustic, Designer, Office Renovation & Retail Fit-outs." />
+
+  <!-- Favicon + social preview -->
+  <link rel="icon" href="assets/logo.png" />
+  <meta property="og:title" content="Kansal Trading Company" />
+  <meta property="og:description" content="False ceiling services & material wholesaler in Noida. Labour optional." />
+  <meta property="og:image" content="assets/logo.png" />
+
+  <style>
+    :root{
+      --bg: #0b0f14;        /* main background */
+      --ink: #e5e7eb;       /* main text */
+      --muted: #9ca3af;
+      --dark: #020617;      /* deepest */
+      --card: #0f172a;      /* card background */
+      --line: rgba(255,255,255,.08);
+      --line2: rgba(255,255,255,.12);
+      --shadow: 0 20px 40px rgba(0,0,0,.6);
+      --radius2: 24px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    a{ color: inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
+    .section{ padding: 72px 0; }
+    .grid{ display:grid; gap: 22px; }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      letter-spacing: .2px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{ background:#fff; color:#0b0f14; box-shadow: var(--shadow); }
+    .btn-ghost{ background: rgba(255,255,255,.10); color:#fff; border-color: rgba(255,255,255,.22); }
+    .btn-ghost:hover{ background: rgba(255,255,255,.14); }
+
+    .pill{
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(10px);
+      font-size: 12px;
+      color: rgba(255,255,255,.88);
+    }
+
+    /* Header */
+    .topbar{
+      position: sticky;
+      top:0;
+      z-index: 40;
+      background: rgba(2,6,23,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 12px;
+      color: rgba(255,255,255,.70);
+    }
+
+    /* Logo */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 240px;
+    }
+    .logo img{
+      height: 34px;
+      width:auto;
+      display:block;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.6));
+    }
+    .logo .text{ display:flex; flex-direction:column; line-height: 1.05; }
+    .logo .text .name{
+      font-weight: 900;
+      letter-spacing: .12em;
+      font-size: 12px;
+      color: rgba(255,255,255,.92);
+      text-transform: uppercase;
+    }
+    .logo .text .tag{
+      font-size: 10px;
+      letter-spacing: .26em;
+      color: rgba(255,255,255,.60);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav{
+      display:flex; gap: 14px; align-items:center; justify-content:flex-end;
+      flex-wrap: wrap;
+    }
+    .nav a{
+      font-weight: 700;
+      color: rgba(255,255,255,.80);
+    }
+    .nav a:hover{ color: #fff; }
+    .nav .cta{
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    /* Hero */
+    .hero{
+      position: relative;
+      min-height: 78vh;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(0deg, rgba(2,6,23,.55), rgba(2,6,23,.55)),
+        url("assets/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.02);
+      filter: contrast(1.05) saturate(1.05);
+    }
+    .hero .content{
+      position:relative;
+      padding: 86px 0;
+      width:100%;
+    }
+    .hero h1{
+      margin: 14px 0 0;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .hero p{
+      margin: 14px 0 0;
+      font-size: 18px;
+      color: rgba(255,255,255,.88);
+      max-width: 720px;
+    }
+    .hero .actions{
+      margin-top: 26px;
+      display:flex; gap: 10px; flex-wrap:wrap;
+    }
+
+    .h2{
+      margin:0;
+      font-size: clamp(26px, 3vw, 40px);
+      letter-spacing: -0.02em;
+    }
+    .sub{
+      margin: 10px 0 0;
+      color: rgba(255,255,255,.75);
+      max-width: 900px;
+    }
+
+    /* Cards */
+    .card{
+      background: var(--dark);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-soft{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius2);
+    }
+
+    /* Services */
+    .services-grid{ grid-template-columns: 1fr 1fr; }
+    .media{
+      aspect-ratio: 16/10;
+      background: #111827 url("assets/services.jpg") center/cover no-repeat;
+    }
+    .service-list{
+      margin:0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 10px;
+      font-size: 18px;
+      color: rgba(255,255,255,.90);
+    }
+    .service-item{ display:flex; gap: 10px; align-items:flex-start; }
+    .dot{
+      width: 9px; height:9px; border-radius: 999px;
+      background: rgba(255,255,255,.85);
+      margin-top: 10px;
+      flex: 0 0 auto;
+    }
+
+    /* Projects */
+    .projects{ grid-template-columns: repeat(2, 1fr); }
+    .project-media{
+      aspect-ratio: 4/5;
+      background: #111827 center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(.92);
+    }
+    .project-body{ padding: 14px 14px 16px; }
+    .project-tag{
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      font-weight: 900;
+    }
+    .project-loc{ margin-top: 6px; font-weight: 900; }
+
+    /* Why */
+    .why{ background: #050a10; border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); }
+    .why-grid{ grid-template-columns: repeat(2, 1fr); }
+    .why-card{ padding: 20px; }
+    .why-num{ font-size: 40px; font-weight: 950; letter-spacing: -0.02em; }
+    .why-text{ margin-top: 10px; color: rgba(255,255,255,.78); }
+
+    /* Reviews */
+    .reviews{ grid-template-columns: repeat(3, 1fr); }
+    .quote{ padding: 18px; }
+    .quote p{ margin:0; color: rgba(255,255,255,.82); }
+    .quote .by{ margin-top: 12px; font-size: 13px; color: rgba(255,255,255,.52); font-weight: 800; }
+
+    /* Contact */
+    .contact-grid{ grid-template-columns: 1.1fr .9fr; align-items:start; }
+    .contact-media{
+      aspect-ratio: 16/10;
+      background: #111827 url("assets/contact.jpg") center/cover no-repeat;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .contact-box{ padding: 18px; border-radius: var(--radius2); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10); }
+    .kv{ display:grid; gap: 10px; color: rgba(255,255,255,.86); font-size: 15px; }
+    .kv b{ color:#fff; }
+
+    form{ margin-top: 14px; display:grid; gap: 10px; }
+    input, textarea{
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      color:#fff;
+      outline:none;
+      font-size: 14px;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    input::placeholder, textarea::placeholder{ color: rgba(255,255,255,.55); }
+    .fine{ margin: 10px 0 0; font-size: 12px; color: rgba(255,255,255,.55); }
+
+    /* Footer */
+    footer{
+      background:#000;
+      color: rgba(255,255,255,.70);
+      padding: 26px 0;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,.10);
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+    }
+
+    /* Floating WhatsApp */
+    .wa-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: #fff;
+      color: #0b0f14;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: var(--shadow);
+      font-weight: 950;
+      letter-spacing: .2px;
+    }
+    .wa-dot{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34,197,94,.18);
+    }
+
+    @media (max-width: 980px){
+      .services-grid{ grid-template-columns: 1fr; }
+      .reviews{ grid-template-columns: repeat(2, 1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px){
+      .logo{ min-width:auto; }
+      .logo .text{ display:none; }
+      .projects{ grid-template-columns: 1fr; }
+      .why-grid{ grid-template-columns: 1fr; }
+      .reviews{ grid-template-columns: 1fr; }
+      .topbar .inner{ align-items:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div>The #1 False Ceiling Company in NCR</div>
+
+        <a class="logo" href="#home" aria-label="Kansal Trading Company">
+          <img src="assets/logo.png" alt="Kansal Trading Company logo" />
+          <span class="text">
+            <span class="name">Kansal Trading</span>
+            <span class="tag">Company</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact" class="cta">Get Quote</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap content">
+      <div class="pill">
+        <span>Material wholesaler</span>
+        <span style="opacity:.6;">•</span>
+        <span>Labour & installation optional</span>
+      </div>
+
+      <h1>Ceilings that transform spaces</h1>
+      <p>Clean finishing. Perfect lines. Zero delays. Wholesale supply of ceiling materials with optional labour support for installation.</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+        <a class="btn btn-ghost" href="tel:+919217065021">Call: +91 92170 65021</a>
+        <a class="btn btn-ghost" id="waHero" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+
+      <div style="margin-top:18px; color:rgba(255,255,255,.75); font-size:13px;">
+        Phone: +91 92170 65021, +91 821 823 3904 • Email: kansaltradingcompany@gmail.com • B-11 Sector 9, Noida
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2 class="h2">OUR SERVICES</h2>
+      <p class="sub">
+        We are a <b>material wholesaler</b>. Labour and installation can be provided as an <b>optional service</b>, based on your site requirement.
+      </p>
+
+      <div class="grid services-grid" style="margin-top: 22px;">
+        <div class="card-soft" style="overflow:hidden;">
+          <div class="media" title="Services image (optional)"></div>
+        </div>
+
+        <div class="card-soft" style="padding:18px;">
+          <ul class="service-list">
+            <li class="service-item"><span class="dot"></span><span>Gypsum False Ceilings</span></li>
+            <li class="service-item"><span class="dot"></span><span>Grid Ceilings</span></li>
+            <li class="service-item"><span class="dot"></span><span>Acoustic Ceilings</span></li>
+            <li class="service-item"><span class="dot"></span><span>Designer Ceilings</span></li>
+            <li class="service-item"><span class="dot"></span><span>Office Renovation Ceilings</span></li>
+            <li class="service-item"><span class="dot"></span><span>Retail & Mall Fit-Out Ceilings</span></li>
+          </ul>
+
+          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="#contact">Request Pricing</a>
+            <a class="btn btn-ghost" id="waServices" target="_blank" rel="noreferrer">WhatsApp for Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <h2 class="h2">Recent Projects</h2>
+      <p class="sub">Your photos are added below. Share more and this can become a full gallery.</p>
+
+      <div class="grid projects" style="margin-top:22px;">
+        <article class="card">
+          <div class="project-media" style="background-image:url('assets/project-1.jpg');"></div>
+          <div class="project-body">
+            <div class="project-tag">Corporate Office Project</div>
+            <div class="project-loc">Adobe — Noida</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-media" style="background-image:url('assets/project-2.jpg');"></div>
+          <div class="project-body">
+            <div class="project-tag">Mall Fit-Out Project</div>
+            <div class="project-loc">Modi Mall — Noida</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why" id="why">
+    <div class="wrap">
+      <h2 class="h2">Why work with us</h2>
+      <p class="sub">Professional finishing, timeline discipline, and clear pricing—backed by wholesaler-level material supply.</p>
+
+      <div class="grid why-grid" style="margin-top:22px;">
+        <div class="card-soft why-card">
+          <div class="why-num">#1</div>
+          <div class="why-text">Clean lines, perfect edges, and high-quality materials that make your space look professional.</div>
+        </div>
+        <div class="card-soft why-card">
+          <div class="why-num">24/7</div>
+          <div class="why-text">We stick to timelines—no delays, no excuses. Support available as per project needs.</div>
+        </div>
+        <div class="card-soft why-card">
+          <div class="why-num">100+</div>
+          <div class="why-text">100+ commercial ceiling projects across offices, malls, and retail spaces.</div>
+        </div>
+        <div class="card-soft why-card">
+          <div class="why-num">₹₹₹</div>
+          <div class="why-text">Clear pricing, transparent process, and full material clarity from day one.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <h2 class="h2">Client Reviews</h2>
+      <p class="sub">Replace these with real testimonials whenever you want.</p>
+
+      <div class="grid reviews" style="margin-top:22px;">
+        <div class="card quote">
+          <p>“Kansal Trading delivered exactly what they promised — clean finishing, perfect alignment, and zero disruption.”</p>
+          <div class="by">Corporate Office — Noida</div>
+        </div>
+        <div class="card quote">
+          <p>“The ceiling work stands out immediately. Precision and detailing were on another level.”</p>
+          <div class="by">Mall Project — Facility Manager</div>
+        </div>
+        <div class="card quote">
+          <p>“They gave multiple design options, helped us choose the right materials, and executed flawlessly.”</p>
+          <div class="by">Corporate Office — Gurugram</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2 class="h2">Do you have questions? Contact us.</h2>
+
+      <div class="grid contact-grid" style="margin-top:22px;">
+        <div class="contact-media" title="Contact image (optional)"></div>
+
+        <div class="contact-box">
+          <div class="kv">
+            <div><b>Phone:</b> <a href="tel:+919217065021">+91 92170 65021</a>, <a href="tel:+918218233904">+91 821 823 3904</a></div>
+            <div><b>Email:</b> <a href="mailto:kansaltradingcompany@gmail.com">kansaltradingcompany@gmail.com</a></div>
+            <div><b>Address:</b> B-11, Sector 9, Noida, 201301</div>
+          </div>
+
+          <form id="quoteForm">
+            <input id="name" name="name" placeholder="Your Name" required />
+            <input id="phone" name="phone" placeholder="Phone Number" required />
+            <input id="email" name="email" placeholder="Email (optional)" type="email" />
+            <textarea id="msg" name="message" placeholder="Describe your requirement (area, ceiling type, location)" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </form>
+
+          <div class="fine">
+            This site is static on GitHub Pages. The form opens your email app to send the inquiry.
+            If you want server-side form delivery, tell me and I’ll provide the best option.
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-ghost" id="waContact" target="_blank" rel="noreferrer">WhatsApp for Quote</a>
+            <a class="btn btn-ghost" href="tel:+919217065021">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Kansal Trading Company</div>
+      <div>Gypsum • Grid • Acoustic • Designer • Office Renovation • Retail Fit-outs</div>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="waFloat" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <span class="wa-dot"></span>
+    WhatsApp
+  </a>
+
+  <script>
+    // WhatsApp number (default: +91 92170 65021)
+    const WA_NUMBER = "919217065021";
+    const WA_DEFAULT_TEXT = "Hi Kansal Trading Company, I need a quote for ceiling material and/or installation. Please share details.";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function waLink(text){
+      return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+    }
+    ["waFloat", "waHero", "waServices", "waContact"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = waLink(WA_DEFAULT_TEXT);
+    });
+
+    // Static-site form -> opens mail client
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg = document.getElementById("msg").value.trim();
+
+      const subject = "Inquiry - Kansal Trading Company (Ceiling Quote)";
+      const body =
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Email: " + (email || "-") + "\n\n" +
+        "Requirement:\n" + msg + "\n\n" +
+        "Sent from Kansal Trading Company website.";
+
+      window.location.href =
+        "mailto:kansaltradingcompany@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
