@@ -1,600 +1,349 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kansal Trading Company | False Ceiling & Material Wholesaler</title>
-  <meta name="description" content="Kansal Trading Company (Noida): wholesale ceiling materials with optional labour & installation. Gypsum, Grid, Acoustic, Designer, Office Renovation & Retail Fit-outs." />
+<style>
+  :root{
+    /* Corporate palette */
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --surface2: #f1f5f9;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #0f172a;     /* slate-900 */
+    --muted: #475569;    /* slate-600 */
+    --muted2: #64748b;   /* slate-500 */
 
-  <link rel="icon" href="assets/logo.png" />
+    --primary: #0b2b5a;  /* deep navy */
+    --primary2: #143b73; /* hover navy */
+    --accent: #0ea5e9;   /* subtle accent (sky) */
 
-  <style>
-    :root{
-      --bg: #070b12;
-      --surface: rgba(255,255,255,.06);
-      --surface2: rgba(255,255,255,.09);
-      --card: rgba(255,255,255,.07);
-      --border: rgba(255,255,255,.10);
-      --text: #e9eef6;
-      --muted: rgba(233,238,246,.72);
-      --muted2: rgba(233,238,246,.55);
-      --shadow: 0 22px 60px rgba(0,0,0,.55);
-      --radius: 22px;
-      --max: 1140px;
-    }
+    --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --radius: 16px;
+    --max: 1140px;
+  }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1200px 700px at 15% 0%, rgba(59,130,246,.14), transparent 55%),
-                  radial-gradient(900px 500px at 85% 15%, rgba(16,185,129,.10), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-    }
-    a{ color:inherit; text-decoration:none; }
-    img{ display:block; max-width:100%; }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a{ color:inherit; text-decoration:none; }
+  img{ display:block; max-width:100%; }
 
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-    .section{ padding: 76px 0; }
-    .grid{ display:grid; gap: 18px; }
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+  .section{ padding: 72px 0; }
+  .grid{ display:grid; gap: 18px; }
 
-    /* Header */
-    header{
-      position: sticky; top:0; z-index: 60;
-      background: rgba(2,6,23,.72);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap: 14px;
-      padding: 12px 0;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 12px;
-      min-width: 260px;
-    }
-    .brand img{
-      height: 38px; width:auto;
-      filter: drop-shadow(0 12px 24px rgba(0,0,0,.55));
-    }
-    .brand .name{
-      display:flex; flex-direction:column; line-height:1.05;
-    }
-    .brand .name b{
-      letter-spacing:.14em; text-transform:uppercase;
-      font-size: 12px;
-    }
-    .brand .name span{
-      letter-spacing:.26em; text-transform:uppercase;
-      font-size: 10px; color: var(--muted2);
-      margin-top: 3px;
-    }
+  /* Header */
+  header{
+    position: sticky; top:0; z-index: 60;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 14px;
+    padding: 12px 0;
+  }
+  .brand{
+    display:flex; align-items:center; gap: 12px;
+    min-width: 260px;
+  }
+  .brand img{
+    height: 38px; width:auto;
+  }
+  .brand .name{
+    display:flex; flex-direction:column; line-height:1.05;
+  }
+  .brand .name b{
+    letter-spacing:.08em; text-transform:uppercase;
+    font-size: 12px;
+    color: var(--primary);
+  }
+  .brand .name span{
+    letter-spacing:.18em; text-transform:uppercase;
+    font-size: 10px; color: var(--muted2);
+    margin-top: 3px;
+  }
 
-    nav{ display:flex; gap: 14px; align-items:center; flex-wrap:wrap; }
-    nav a{
-      font-weight: 700;
-      color: rgba(233,238,246,.80);
-      padding: 8px 10px;
-      border-radius: 999px;
-      transition: background .15s ease, color .15s ease, transform .15s ease;
-    }
-    nav a:hover{
-      background: rgba(255,255,255,.08);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-    nav a.cta{
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.06);
-    }
+  nav{ display:flex; gap: 10px; align-items:center; flex-wrap:wrap; }
+  nav a{
+    font-weight: 700;
+    color: #0f172a;
+    padding: 8px 10px;
+    border-radius: 999px;
+    transition: background .15s ease, color .15s ease, transform .15s ease;
+  }
+  nav a:hover{
+    background: var(--surface2);
+    transform: translateY(-1px);
+  }
+  nav a.cta{
+    background: var(--primary);
+    color: #fff;
+    padding: 9px 14px;
+  }
+  nav a.cta:hover{ background: var(--primary2); }
 
-    /* Buttons */
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      font-weight: 900;
-      letter-spacing:.02em;
-      border: 1px solid transparent;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      user-select:none;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn.primary{ background: #fff; color:#050a10; box-shadow: var(--shadow); }
-    .btn.ghost{ background: rgba(255,255,255,.10); color:#fff; border-color: rgba(255,255,255,.20); }
-    .btn.ghost:hover{ background: rgba(255,255,255,.14); }
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    gap:10px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    letter-spacing:.01em;
+    border: 1px solid transparent;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    user-select:none;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform: translateY(-1px); }
+  .btn.primary{ background: var(--primary); color:#fff; box-shadow: var(--shadow); }
+  .btn.primary:hover{ background: var(--primary2); }
+  .btn.ghost{
+    background: #fff;
+    color: var(--primary);
+    border-color: var(--border);
+  }
+  .btn.ghost:hover{ background: var(--surface2); }
 
-    /* Hero */
-    .hero{
-      position:relative;
-      min-height: 78vh;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .hero::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(0deg, rgba(2,6,23,.70), rgba(2,6,23,.55)),
-        url("assets/hero.jpeg") center/cover no-repeat;
-      filter: contrast(1.06) saturate(1.05);
-      transform: scale(1.02);
-    }
-    .hero .content{
-      position:relative;
-      padding: 86px 0;
-      max-width: 820px;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.16);
-      color: rgba(255,255,255,.88);
-      font-size: 12px;
-      letter-spacing: .02em;
-    }
-    h1{
-      margin: 16px 0 0;
-      font-size: clamp(36px, 5.2vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-    }
-    .lead{
-      margin: 14px 0 0;
-      font-size: 18px;
-      color: rgba(255,255,255,.86);
-      max-width: 760px;
-    }
-    .hero-actions{
-      margin-top: 24px;
-      display:flex; gap: 10px; flex-wrap:wrap;
-    }
-    .hero-meta{
-      margin-top: 18px;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-    }
+  /* Hero */
+  .hero{
+    position:relative;
+    min-height: 72vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    border-bottom: 1px solid var(--border);
+    background:
+      linear-gradient(90deg, rgba(11,43,90,.08), rgba(14,165,233,.06)),
+      #fff;
+  }
 
-    /* Cards / sections */
-    .h2{
-      margin:0;
-      font-size: clamp(26px, 3vw, 40px);
-      letter-spacing: -0.02em;
-    }
-    .sub{
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 900px;
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .card.pad{ padding: 18px; }
+  /* Optional: if you still want an image hero, keep your hero.jpeg but make it subtle */
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.70)),
+      url("assets/hero.jpeg") center/cover no-repeat;
+    filter: saturate(.95) contrast(1.02);
+    transform: scale(1.02);
+  }
 
-    /* Services */
-    .services{
-      grid-template-columns: 1.1fr .9fr;
-      align-items: stretch;
-      margin-top: 18px;
-    }
-    .service-list{
-      margin: 14px 0 0;
-      padding: 0;
-      list-style:none;
-      display:grid;
-      gap: 10px;
-      color: rgba(255,255,255,.88);
-      font-size: 16px;
-    }
-    .service-item{ display:flex; gap: 10px; align-items:flex-start; }
-    .dot{
-      width: 9px; height: 9px; border-radius: 99px;
-      background: rgba(255,255,255,.85);
-      margin-top: 8px;
-      flex: 0 0 auto;
-      box-shadow: 0 0 0 6px rgba(255,255,255,.06);
-    }
-    .service-note{
-      margin-top: 14px;
-      padding: 12px 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      color: rgba(255,255,255,.78);
-      font-size: 13px;
-    }
+  .hero .content{
+    position:relative;
+    padding: 84px 0;
+    max-width: 860px;
+  }
+  .pill{
+    display:inline-flex; align-items:center; gap:10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  h1{
+    margin: 16px 0 0;
+    font-size: clamp(34px, 4.6vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #0b2b5a;
+  }
+  .lead{
+    margin: 14px 0 0;
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 760px;
+  }
+  .hero-actions{
+    margin-top: 24px;
+    display:flex; gap: 10px; flex-wrap:wrap;
+  }
+  .hero-meta{
+    margin-top: 16px;
+    color: var(--muted2);
+    font-size: 13px;
+  }
 
-    /* Projects */
-    .projects{
-      margin-top: 18px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .project{
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      min-height: 320px;
-    }
-    .thumb{
-      height: 220px;
-      background: #0b1220 center/cover no-repeat;
-      filter: brightness(.94);
-    }
-    .pbody{ padding: 14px 14px 16px; }
-    .ptag{
-      font-size: 11px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.62);
-      font-weight: 900;
-    }
-    .ptitle{
-      margin-top: 6px;
-      font-weight: 900;
-      font-size: 15px;
-      color: rgba(255,255,255,.92);
-    }
-    .ploc{
-      margin-top: 2px;
-      font-size: 13px;
-      color: rgba(255,255,255,.62);
-    }
+  /* Headings / sections */
+  .h2{
+    margin:0;
+    font-size: clamp(24px, 2.6vw, 36px);
+    letter-spacing: -0.02em;
+    color: #0b2b5a;
+  }
+  .sub{
+    margin: 10px 0 0;
+    color: var(--muted);
+    max-width: 900px;
+  }
 
-    /* Why */
-    .why{
-      background: rgba(255,255,255,.02);
-      border-top: 1px solid rgba(255,255,255,.06);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .whygrid{
-      margin-top: 18px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .metric{ padding: 18px; }
-    .metric .big{ font-size: 34px; font-weight: 950; letter-spacing:-0.02em; }
-    .metric .txt{ margin-top: 8px; color: rgba(255,255,255,.74); font-size: 13px; }
+  .card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .card.pad{ padding: 18px; }
 
-    /* Contact */
-    .contact{
-      margin-top: 18px;
-      grid-template-columns: 1fr 1fr;
-      align-items:start;
-    }
-    .kv{ display:grid; gap: 10px; color: rgba(255,255,255,.84); font-size: 15px; }
-    .kv b{ color:#fff; }
-    form{ display:grid; gap: 10px; margin-top: 12px; }
-    input, textarea{
-      width:100%;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
-      color:#fff;
-      outline:none;
-      font-size: 14px;
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-    input::placeholder, textarea::placeholder{ color: rgba(255,255,255,.55); }
+  /* Services */
+  .services{
+    grid-template-columns: 1.1fr .9fr;
+    align-items: stretch;
+    margin-top: 18px;
+  }
+  .service-list{
+    margin: 14px 0 0;
+    padding: 0;
+    list-style:none;
+    display:grid;
+    gap: 10px;
+    color: #0f172a;
+    font-size: 16px;
+  }
+  .service-item{ display:flex; gap: 10px; align-items:flex-start; }
+  .dot{
+    width: 8px; height: 8px; border-radius: 99px;
+    background: var(--accent);
+    margin-top: 9px;
+    flex: 0 0 auto;
+    box-shadow: 0 0 0 5px rgba(14,165,233,.16);
+  }
+  .service-note{
+    margin-top: 14px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
 
-    footer{
-      padding: 28px 0;
-      border-top: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.55);
-      color: rgba(255,255,255,.70);
-      font-size: 13px;
-    }
-    .foot{
-      display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap:wrap;
-    }
+  /* Projects */
+  .projects{
+    margin-top: 18px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .project{
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    min-height: 320px;
+  }
+  .thumb{
+    height: 210px;
+    background: #e2e8f0 center/cover no-repeat;
+  }
+  .pbody{ padding: 14px 14px 16px; }
+  .ptag{
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted2);
+    font-weight: 900;
+  }
+  .ptitle{
+    margin-top: 6px;
+    font-weight: 900;
+    font-size: 15px;
+    color: #0f172a;
+  }
+  .ploc{
+    margin-top: 2px;
+    font-size: 13px;
+    color: var(--muted2);
+  }
 
-    /* WhatsApp floating */
-    .wa{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 80;
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      background: #fff;
-      color: #050a10;
-      font-weight: 950;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,.15);
-    }
-    .wa-dot{
-      width: 10px; height: 10px; border-radius: 99px;
-      background: #22c55e;
-      box-shadow: 0 0 0 6px rgba(34,197,94,.18);
-    }
+  /* Why */
+  .why{
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .whygrid{
+    margin-top: 18px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .metric{ padding: 18px; }
+  .metric .big{ font-size: 32px; font-weight: 950; letter-spacing:-0.02em; color: var(--primary); }
+  .metric .txt{ margin-top: 8px; color: var(--muted); font-size: 13px; }
 
-    @media (max-width: 1020px){
-      .projects{ grid-template-columns: repeat(2, 1fr); }
-      .whygrid{ grid-template-columns: repeat(2, 1fr); }
-      .services{ grid-template-columns: 1fr; }
-      .contact{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px){
-      nav{ display:none; }
-      .projects{ grid-template-columns: 1fr; }
-      .whygrid{ grid-template-columns: 1fr; }
-      .brand{ min-width:auto; }
-      .brand .name span{ display:none; }
-    }
-  </style>
-</head>
+  /* Contact */
+  .contact{
+    margin-top: 18px;
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+  }
+  .kv{ display:grid; gap: 10px; color: var(--muted); font-size: 15px; }
+  .kv b{ color: #0f172a; }
+  form{ display:grid; gap: 10px; margin-top: 12px; }
 
-<body>
-  <header>
-    <div class="wrap topbar">
-      <a class="brand" href="#home" aria-label="Kansal Trading Company">
-        <img src="assets/logo.png" alt="Kansal Trading Company logo" />
-        <div class="name">
-          <b>Kansal Trading</b>
-          <span>Company</span>
-        </div>
-      </a>
+  input, textarea{
+    width:100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: #0f172a;
+    outline:none;
+    font-size: 14px;
+  }
+  textarea{ min-height: 120px; resize: vertical; }
+  input::placeholder, textarea::placeholder{ color: #94a3b8; }
 
-      <nav aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact" class="cta">Get Quote</a>
-      </nav>
-    </div>
-  </header>
+  footer{
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+    background: #ffffff;
+    color: var(--muted2);
+    font-size: 13px;
+  }
+  .foot{
+    display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap:wrap;
+  }
 
-  <section class="hero" id="home">
-    <div class="wrap content">
-      <div class="pill">
-        <span>Material wholesaler</span>
-        <span style="opacity:.6;">•</span>
-        <span>Labour & installation optional</span>
-      </div>
+  /* WhatsApp floating */
+  .wa{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 80;
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 900;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(11,43,90,.18);
+  }
+  .wa-dot{
+    width: 10px; height: 10px; border-radius: 99px;
+    background: #22c55e;
+    box-shadow: 0 0 0 6px rgba(34,197,94,.16);
+  }
 
-      <h1>Ceilings that transform spaces</h1>
-      <p class="lead">
-        Clean finishing. Perfect lines. Wholesale supply of ceiling materials with optional labour support for installation across NCR.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="#contact">Get a Quote</a>
-        <a class="btn ghost" href="tel:+919217065021">Call: +91 92170 65021</a>
-        <a class="btn ghost" id="waHero" target="_blank" rel="noreferrer">WhatsApp</a>
-      </div>
-
-      <div class="hero-meta">
-        Phone: +91 92170 65021, +91 821 823 3904 • Email: kansaltradingcompany@gmail.com • B-11 Sector 9, Noida 201301
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="wrap">
-      <h2 class="h2">Services</h2>
-      <p class="sub">
-        We supply quality materials at wholesale prices. Labour and installation can be provided as an optional service depending on site requirements.
-      </p>
-
-      <div class="grid services">
-        <div class="card pad">
-          <div class="ptag">What we do</div>
-          <ul class="service-list">
-            <li class="service-item"><span class="dot"></span><span>Gypsum False Ceilings</span></li>
-            <li class="service-item"><span class="dot"></span><span>Grid Ceilings</span></li>
-            <li class="service-item"><span class="dot"></span><span>Acoustic Ceilings</span></li>
-            <li class="service-item"><span class="dot"></span><span>Designer Ceilings</span></li>
-            <li class="service-item"><span class="dot"></span><span>Office Renovation Ceilings</span></li>
-            <li class="service-item"><span class="dot"></span><span>Retail & Mall Fit-Out Ceilings</span></li>
-          </ul>
-
-          <div class="service-note">
-            Note: All material wholesaler. Labour provided optional (as per requirement).
-          </div>
-
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="#contact">Request Pricing</a>
-            <a class="btn ghost" id="waServices" target="_blank" rel="noreferrer">WhatsApp for Quote</a>
-          </div>
-        </div>
-
-        <div class="card pad">
-          <div class="ptag">How we work</div>
-          <div class="ptitle" style="margin-top:8px;">Professional execution + transparent pricing</div>
-          <p class="sub" style="margin-top:10px;">
-            Site assessment, material selection, clear costing, and an on-time plan. We maintain finishing quality with clean alignment and strong detailing.
-          </p>
-
-          <div class="grid" style="grid-template-columns:1fr; margin-top:14px;">
-            <div class="card" style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.10); padding:14px; border-radius:18px;">
-              <div class="ptag">Coverage</div>
-              <div class="ptitle" style="margin-top:6px;">Noida • NCR • Commercial Projects</div>
-              <div class="ploc">Offices • Retail • Malls • Fit-outs</div>
-            </div>
-            <div class="card" style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.10); padding:14px; border-radius:18px;">
-              <div class="ptag">Support</div>
-              <div class="ptitle" style="margin-top:6px;">Material supply + optional labour</div>
-              <div class="ploc">Call/WhatsApp for quick quote</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="wrap">
-      <h2 class="h2">Recent Projects</h2>
-      <p class="sub">Add more photos anytime. This gallery is ready for 4 projects.</p>
-
-      <div class="grid projects">
-        <article class="card project">
-          <div class="thumb" style="background-image:url('assets/project-1.jpeg');"></div>
-          <div class="pbody">
-            <div class="ptag">Corporate Office Project</div>
-            <div class="ptitle">Project 1</div>
-            <div class="ploc">Noida</div>
-          </div>
-        </article>
-
-        <article class="card project">
-          <div class="thumb" style="background-image:url('assets/project-2.jpeg');"></div>
-          <div class="pbody">
-            <div class="ptag">Retail / Mall Fit-Out</div>
-            <div class="ptitle">Project 2</div>
-            <div class="ploc">Noida</div>
-          </div>
-        </article>
-
-        <!-- NEW: Add your two extra photos as assets/project-3.jpeg and assets/project-4.jpeg -->
-        <article class="card project">
-          <div class="thumb" style="background-image:url('assets/project-3.jpeg');"></div>
-          <div class="pbody">
-            <div class="ptag">Commercial Project</div>
-            <div class="ptitle">Project 3</div>
-            <div class="ploc">NCR</div>
-          </div>
-        </article>
-
-        <article class="card project">
-          <div class="thumb" style="background-image:url('assets/project-4.jpeg');"></div>
-          <div class="pbody">
-            <div class="ptag">Commercial Project</div>
-            <div class="ptitle">Project 4</div>
-            <div class="ploc">NCR</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="sub" style="margin-top:12px; font-size:13px;">
-        To rename titles/locations: edit the “Project 3 / Project 4” text in this section only.
-      </div>
-    </div>
-  </section>
-
-  <section class="section why" id="why">
-    <div class="wrap">
-      <h2 class="h2">Why work with us</h2>
-      <p class="sub">Reliable finishing quality, disciplined timelines, and clear pricing—supported by wholesaler-level material supply.</p>
-
-      <div class="grid whygrid">
-        <div class="card metric">
-          <div class="big">#1</div>
-          <div class="txt">Finishing quality and alignment focus</div>
-        </div>
-        <div class="card metric">
-          <div class="big">24/7</div>
-          <div class="txt">Support as per project needs</div>
-        </div>
-        <div class="card metric">
-          <div class="big">100+</div>
-          <div class="txt">Commercial projects delivered</div>
-        </div>
-        <div class="card metric">
-          <div class="big">₹₹₹</div>
-          <div class="txt">Transparent pricing & material clarity</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="wrap">
-      <h2 class="h2">Contact</h2>
-      <p class="sub">Share your area, ceiling type, and site location. We will respond with pricing and material options.</p>
-
-      <div class="grid contact">
-        <div class="card pad">
-          <div class="kv">
-            <div><b>Phone:</b> <a href="tel:+919217065021">+91 92170 65021</a>, <a href="tel:+918218233904">+91 821 823 3904</a></div>
-            <div><b>Email:</b> <a href="mailto:kansaltradingcompany@gmail.com">kansaltradingcompany@gmail.com</a></div>
-            <div><b>Address:</b> B-11 Sector 9, Noida 201301</div>
-          </div>
-        </div>
-
-        <div class="card pad">
-          <div class="ptag">Quick inquiry</div>
-          <form id="quoteForm">
-            <input id="name" placeholder="Your Name" required />
-            <input id="phone" placeholder="Phone Number" required />
-            <input id="email" placeholder="Email (optional)" type="email" />
-            <textarea id="msg" placeholder="Requirement (area/sqft, ceiling type, site location)" required></textarea>
-            <button class="btn primary" type="submit">Send Inquiry</button>
-          </form>
-          <div class="sub" style="margin-top:10px; font-size:12px;">
-            This opens your email app (GitHub Pages is static). If you want a real form delivery, tell me and I’ll set up a free option.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap foot">
-      <div>© <span id="year"></span> Kansal Trading Company</div>
-      <div>Gypsum • Grid • Acoustic • Designer • Office Renovation • Retail Fit-outs</div>
-    </div>
-  </footer>
-
-  <a class="wa" id="waFloat" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
-    <span class="wa-dot"></span>
-    WhatsApp
-  </a>
-
-  <script>
-    const WA_NUMBER = "919217065021";
-    const WA_DEFAULT_TEXT = "Hi Kansal Trading Company, I need a quote for ceiling material and/or installation. Please share details.";
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function waLink(text){
-      return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
-    }
-    const waHero = document.getElementById("waHero");
-    const waServices = document.getElementById("waServices");
-    const waFloat = document.getElementById("waFloat");
-
-    if (waHero) waHero.href = waLink(WA_DEFAULT_TEXT);
-    if (waServices) waServices.href = waLink(WA_DEFAULT_TEXT);
-    if (waFloat) waFloat.href = waLink(WA_DEFAULT_TEXT);
-
-    document.getElementById("quoteForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      const subject = "Inquiry - Kansal Trading Company (Ceiling Quote)";
-      const body =
-        "Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
-        "Email: " + (email || "-") + "\n\n" +
-        "Requirement:\n" + msg + "\n\n" +
-        "Sent from Kansal Trading Company website.";
-
-      window.location.href =
-        "mailto:kansaltradingcompany@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-    });
-  </script>
-</body>
-</html>
+  @media (max-width: 1020px){
+    .projects{ grid-template-columns: repeat(2, 1fr); }
+    .whygrid{ grid-template-columns: repeat(2, 1fr); }
+    .services{ grid-template-columns: 1fr; }
+    .contact{ grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px){
+    nav{ display:none; }
+    .projects{ grid-template-columns: 1fr; }
+    .whygrid{ grid-template-columns: 1fr; }
+    .brand{ min-width:auto; }
+    .brand .name span{ display:none; }
+  }
+</style>
 
