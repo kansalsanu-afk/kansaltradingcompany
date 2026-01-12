@@ -561,15 +561,40 @@
 
         <div class="card pad">
           <div class="ptag">Quick inquiry</div>
-          <form id="quoteForm">
-            <input id="name" placeholder="Your Name" required />
-            <input id="phone" placeholder="Phone Number" required />
-            <input id="email" placeholder="Email (optional)" type="email" />
-            <textarea id="msg" placeholder="Requirement (area/sqft, ceiling type, site location)" required></textarea>
+
+          <!-- FORMSPREE FORM -->
+          <form
+            id="quoteForm"
+            action="https://formspree.io/f/mwvvkpbn"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email (optional)"
+            />
+            <textarea
+              name="requirement"
+              placeholder="Requirement (area/sqft, ceiling type, site location)"
+              required
+            ></textarea>
             <button class="btn primary" type="submit">Send Inquiry</button>
           </form>
+
           <div class="sub" style="margin-top:10px; font-size:12px;">
-            This form opens your email application with the details filled in. You can review and send the email to us.
+            Your inquiry will be delivered directly to Kansal Trading Company via our secure form service.
           </div>
         </div>
       </div>
@@ -590,7 +615,8 @@
 
   <script>
     const WA_NUMBER = "919217065021";
-    const WA_DEFAULT_TEXT = "Hi Kansal Trading Company, I need a quote for ceiling material and/or installation. Please share details.";
+    const WA_DEFAULT_TEXT =
+      "Hi Kansal Trading Company, I need a quote for ceiling material and/or installation. Please share details.";
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -604,28 +630,6 @@
     if (waHero) waHero.href = waLink(WA_DEFAULT_TEXT);
     if (waServices) waServices.href = waLink(WA_DEFAULT_TEXT);
     if (waFloat) waFloat.href = waLink(WA_DEFAULT_TEXT);
-
-    document.getElementById("quoteForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      const subject = "Inquiry - Kansal Trading Company (Ceiling Quote)";
-      const body =
-        "Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
-        "Email: " + (email || "-") + "\n\n" +
-        "Requirement:\n" + msg + "\n\n" +
-        "Sent from Kansal Trading Company website.";
-
-      window.location.href =
-        "mailto:kansaltradingcompany@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-    });
   </script>
 </body>
 </html>
-
